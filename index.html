@@ -1,0 +1,148 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>動態修改履歷表樣式</title>
+    <style media="screen">
+      .number {
+        background-color: #5fcf80;
+        color: #fff;
+        height: 30px;
+        width: 30px;
+        display: inline-block;
+        font-size: 0.8em;
+        margin-right: 4px;
+        line-height: 30px;
+        text-align: center;
+        text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+        border-radius: 100%;
+      }
+      label{
+        font-size: 18px;
+      }
+      input[type="text"],
+      input[type="date"],
+      textarea,
+      select{
+        background: rgba(255,255,255,0.1);
+        border: none;
+        font-size: 16px;
+        height: auto;
+        margin: 0;
+        outline: 0;
+        padding: 15px;
+        width: 100%;
+        background-color: #DDDDDD;
+        color: #8a97a0;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+        margin-bottom: 30px;
+      }
+      button{
+        padding: 9px 39px 8px 39px;
+        color: #FFFFFF;
+        background-color: #4bc970;
+        font-size: 18px;
+        text-align: center;
+        font-style: normal;
+        border-radius: 10px;
+        width: 49%;
+        border: 1px solid #3ac162;
+        border-width: 1px 1px 3px;
+        box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+        margin-bottom: 10px;
+      }
+      legend{
+        font-size: 1.4em;
+      }
+      h1{
+        font-family: 'Nunito', sans-serif;
+        color: #384047;
+        margin: 0 0 30px 0;
+        text-align: center;
+      }
+      form{
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      select {
+        overflow-y: hidden;
+      }
+    </style>
+</head>
+
+<body>
+    <form name="form1" align="left" action="tt.jsp" method="post">
+      <h1>Resume</h1>
+      <fieldset>
+        <legend><span class="number">1</span>Your basic info</legend>
+        <label>名字：</label>
+        <br><br>
+        <INPUT name="username" type=text size=10 maxlength=20>
+        <br><br>
+        <label>性別：</label>
+        <br><br>
+        <INPUT name="sex" type=radio value="男" checked>男
+        <INPUT name="sex" type=radio value="女">女
+        <br><br>
+        <label>現職：</label>
+        <br><br>
+        <INPUT name="nowwork" type=text size=10 maxlength=20>
+        <br><br>
+        <label>曾任：</label>
+        <br><br>
+        <INPUT name="pastwork" type=text size=10 maxlength=20>
+        <br><br>
+        <label>出生年月日：</label>
+        <br><br>
+        <INPUT name="birth" type=date>
+        <br><br>
+        <label>通訊地址：</label>
+        <br><br>
+        <input name="address" type=text size=10 maxlength=50>
+      </fieldset>
+      <br><br>
+      <fieldset>
+        <legend><span class="number">2</span>Your profile</legend>
+        <br><br>
+        <label>學歷：</label>
+        <br><br>
+        <select name="study">
+            <option value="國小">國小</option>
+            <option value="國中">國中</option>
+            <option value="高中">高中</option>
+            <option value="大學">大學</option>
+            <option value="大學以上">大學以上</option>
+        </select>
+        <br><br>
+        <label>語言能力：</label>
+        <br><br>
+        <select name="language" size="4" multiple>
+            <option value="中文">中文</option>
+            <option value="英文">英文</option>
+            <option value="日文">日文</option>
+            <option value="韓文">韓文</option>
+        </select>
+        <br><br>
+        <label>專長：</label>
+        <br><br>
+        <textarea name="advantage" type=textarea cols="50" rows="3"></textarea>
+        <br><br>
+        <label>興趣（可複選）：</label>
+        <br><br>
+        <INPUT name="hobby" type=checkbox value="閱讀">閱讀
+        <INPUT name="hobby" type=checkbox value="運動">運動
+        <INPUT name="hobby" type=checkbox value="音樂">音樂
+        <INPUT name="hobby" type=checkbox value="聊天">聊天
+        <br><br>
+        <label>經歷：</label>
+        <br><br>
+        <textarea name="note" type=textarea cols="50" rows="10"></textarea>
+        <br><br>
+        <button type="submit">送出</button>
+        <button type="reset">重新輸入</button>
+      </fieldset>
+    </form>
+</body>
+
+</html>
