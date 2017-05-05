@@ -1,0 +1,90 @@
+body {
+    font-family: 'Ravi Prakash',cursive;
+    background-color: gainsboro;
+}
+.box {
+    margin: 20px auto;
+    width: 350px;
+    height: 480px;
+    -webkit-border-radius: 8px/7px;
+    -moz-border-radius: 8px/7px;
+    border-radius: 8px/7px;
+    background-color: #ebebeb;
+    -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31);
+    -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31);
+    box-shadow: 1px 2px 5px rgba(0,0,0,.31);
+    border: solid 1px #cbc9c9;
+}
+h1 {
+    text-align: center;
+    font-size: 72px;
+    color: #444444;
+}
+p {
+  font-size: 36px;
+  text-align: center;
+  width: auto;
+}
+form {
+    max-width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+#icon {
+    display: inline-block;
+    width: 30px;
+    background-color: royalblue;
+    padding: 9px 0 0 8px;
+    margin-top: 15px;
+    margin-left: 8px;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+    color: white;
+    -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+    -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+    box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+    border: solid 0 #cbc9c9;
+}
+input[type="password"],
+input[type="text"] {
+    width: 80%;
+    height: 39px;
+    -webkit-border-radius: 0 4px 4px 0px/5px 5px 4px 4px;
+    -moz-border-radius: 0 4px 4px 0px/0px 0 4px 4px;
+    border-radius: 0 4px 4px 0px/5px 5px 4px 4px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+    -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+    box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+    border: solid 1px #cbc9c9;
+    margin-left: -5px;
+    margin-top: 13px;
+    padding-left: 10px;
+    font-family: 'Ravi Prakash', cursive;
+    font-size: 28px;
+}
+input[type="submit"] {
+    font-family: 'Ravi Prakash', cursive;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    display: inline-block;
+    float: right;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-right: 10px;
+    width: 100px;
+    height: 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: royalblue;
+    -webkit-box-shadow: 0 3px rgba(58,87,175,.75);
+    -moz-box-shadow: 0 3px rgba(58,87,175,.75);
+    box-shadow: 0 3px rgba(58,87,175,.75);
+    transition: all 0.1s linear 0s;
+    top: 0;
+    position: relative;
+}
