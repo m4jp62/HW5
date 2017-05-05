@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!--字體-->
     <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
-    <title>登入成功</title>
+    <title>Successfully</title>
     <style media="screen">
     h1 {
         font-size: 72px;
@@ -203,6 +203,7 @@
       -->
       <%}else{%>
         <script>$("#message").html("Sign in Failed");</script>
+        <script>$("title").html("Failed");</script>
         <div class="fbox">
           <p id="note">Sorry,you entered the wrong username or password!</p>
           <input type="button" name="back" id="back" value="back" onclick="location.href='index.jsp'">
@@ -210,6 +211,7 @@
       <%}%>
       <%if(j!=0){%>
         <script>$("#message").html("username has been userd!");</script>
+        <script>$("title").html("Failed");</script>
         <div class="tbox">
           <p id="note">Sorry,your username has been userd!</p>
           <input type="button" name="back" id="back" value="back" onclick="location.href='index.jsp'">
