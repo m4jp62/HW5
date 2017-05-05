@@ -13,9 +13,22 @@
   String password = request.getParameter("password");
   String mail = request.getParameter("mail");
   String phone = request.getParameter("phone");
+  int j = 0;
   database.connectDB();
   if(realname!=null && mail!=null && phone!=null){
+    String sql = "select * from account;";
+    database.query(sql);
+    ResultSet rs = database.getRS();
+    if(rs!=null){
+      while(rs.next()){
+        if(username.equals(rs.getString(username))){
+          j++;
+        }
+      }
+    }
+    if(j==0){
       database.insertData(realname , username , password , mail , phone);
+    }
   }
   String sql = "select * from account;";
   database.query(sql);
@@ -31,7 +44,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!--字體-->
     <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
-    <title>Successfully</title>
+    <title>登入成功</title>
     <style media="screen">
     h1 {
         font-size: 72px;
@@ -73,7 +86,7 @@
         margin-right: 10px;
 
     }
-    .box,.fbox {
+    .box,.fbox ,.tbox{
         margin: 20px auto;
         width: 350px;
         -webkit-border-radius: 8px/7px;
@@ -190,9 +203,15 @@
       -->
       <%}else{%>
         <script>$("#message").html("Sign in Failed");</script>
-		<script>$("title").html("Failed");</script>
         <div class="fbox">
           <p id="note">Sorry,you entered the wrong username or password!</p>
+          <input type="button" name="back" id="back" value="back" onclick="location.href='index.jsp'">
+        </div>
+      <%}%>
+      <%if(j!=0){%>
+        <script>$("#message").html("username has been userd!");</script>
+        <div class="tbox">
+          <p id="note">Sorry,your username has been userd!</p>
           <input type="button" name="back" id="back" value="back" onclick="location.href='index.jsp'">
         </div>
       <%}%>
