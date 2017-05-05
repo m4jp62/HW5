@@ -10,7 +10,7 @@
                 <!--字體-->
                 <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
                     <link href="register.css" rel="stylesheet" type="text/css" media="screen"/>
-                    <title>註冊</title>
+                    <title>Register</title>
                     <script>
                         function check() {
                             if (document.form1.password1.value!=document.form1.password2.value)

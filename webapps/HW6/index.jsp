@@ -23,7 +23,7 @@
                 <!--字體-->
                 <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
                     <link href="main.css" rel="stylesheet" type="text/css" media="screen"/>
-                    <title>登入</title>
+                    <title>Login</title>
                 </head>
                 <body>
                     <h1>Login</h1>
