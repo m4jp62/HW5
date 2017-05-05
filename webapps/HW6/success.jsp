@@ -21,7 +21,7 @@
     ResultSet rs = database.getRS();
     if(rs!=null){
       while(rs.next()){
-        if(username.equals(rs.getString(username))){
+        if(username.equals(rs.getString("username"))){
           j++;
         }
       }
@@ -201,7 +201,7 @@
       <p>Mail&nbsp;:&nbsp;<%=ml%></p>
       <p>Phone&nbsp;:&nbsp;<%=ph%></p>
       -->
-      <%}else{%>
+      <%}else if(i==0 && j==0){%>
         <script>$("#message").html("Sign in Failed");</script>
         <script>$("title").html("Failed");</script>
         <div class="fbox">
@@ -210,11 +210,11 @@
         </div>
       <%}%>
       <%if(j!=0){%>
-        <script>$("#message").html("username has been userd!");</script>
+        <script>$("#message").html("username has been used!");</script>
         <script>$("title").html("Failed");</script>
         <div class="tbox">
-          <p id="note">Sorry,your username has been userd!</p>
-          <input type="button" name="back" id="back" value="back" onclick="location.href='index.jsp'">
+          <p id="note">Sorry,your username has been used!</p>
+          <input type="button" name="back" id="back" value="back" onclick="location.href='register.jsp'">
         </div>
       <%}%>
   </body>
