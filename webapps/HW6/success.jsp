@@ -169,6 +169,7 @@
           }
         }
       }if(i==1){%>
+
       <div class="box">
         <form name="form1" action="success.jsp" method="post">
           <label id="icon" for="realname">
@@ -182,7 +183,7 @@
           <label id="icon" for="password">
               <i class="material-icons">lock</i>
           </label>
-          <input type="password" name="password" id="password" readonly value="<%=pwd%>"></input>
+          <input type="text" name="password" id="password" readonly value="<%=pwd%>"></input>
           <label id="icon" for="mail">
               <i class="material-icons">email</i>
           </label>
@@ -192,6 +193,7 @@
           </label>
           <input type="text" name="phone" id="phone" readonly value="<%=ph%>"></input>
           <input type="button" name="back" id="back" value="back" onclick="location.href='index.jsp'">
+          <input type="button" name="manage" id="manage" value="manage" onclick="location.href='manage.jsp'">
         </form>
       </div>
       <!--
