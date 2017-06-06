@@ -168,7 +168,10 @@
             }
           }
         }
-      }if(i==1){%>
+      }if(i==1){
+        session.setAttribute("login","ok");
+        response.sendRedirect("manage.jsp");
+        %>
 
       <div class="box">
         <form name="form1" action="success.jsp" method="post">

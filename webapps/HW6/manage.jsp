@@ -7,6 +7,12 @@
     <jsp:setProperty property="user" name="database" value="4104029009"/>
     <jsp:setProperty property="password" name="database" value="Ss4104029009!"/>
 </jsp:useBean>
+
+
+<%
+  if((String)session.getAttribute("login")=="ok"){
+%>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -97,3 +103,10 @@
       <input type="button" name="back" id="back" value="back" onclick="location.href='index.jsp'">
     </div>
   </body>
+
+
+  <%
+    }else{
+      response.sendRedirect("index.jsp");
+    }
+  %>
